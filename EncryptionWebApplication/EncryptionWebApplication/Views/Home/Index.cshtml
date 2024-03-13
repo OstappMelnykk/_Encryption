@@ -1,4 +1,64 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+
+    var EncryptionList = new List<string>()
+    {
+    };
 }
 
+@if (EncryptionList.Count != 0)
+{
+    <div class="linkBox">
+        @for (int i = 0; i < @EncryptionList.Count; i++)
+        {
+            <a asp-action="Index" asp-controller="@EncryptionList[i].Split(" ")[0]">@EncryptionList[i]</a>
+        }
+    </div>
+}  
+
+   
+
+
+<style>
+    *{
+        font-family: 'Arial', sans-serif;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a {
+        background-color: rgb(40, 41, 44);
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    a:hover {
+        background-color: rgb(20, 21, 24);
+    }
+
+    a {
+        margin: 23px;
+        text-decoration: none;
+        width: 300px;
+        height: 35px;
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .linkBox{
+        display: flex;
+        flex-direction: column;
+    }
+
+</style>

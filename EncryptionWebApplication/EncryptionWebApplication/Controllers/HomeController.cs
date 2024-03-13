@@ -1,4 +1,5 @@
 using EncryptionWebApplication.Models;
+using EncryptionWebApplication.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -8,7 +9,7 @@ namespace EncryptionWebApplication.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
         }
     }
 }

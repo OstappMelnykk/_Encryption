@@ -3,15 +3,31 @@
 
     var EncryptionList = new List<string>()
     {
+        "Caesar Encryption",
+        "-",
+        "-",
+        "-",
+        "-",
+        "-",
     };
 }
+
+<a asp-action="DevInfo" class="link link2">DevInfo</a>
 
 @if (EncryptionList.Count != 0)
 {
     <div class="linkBox">
         @for (int i = 0; i < @EncryptionList.Count; i++)
         {
-            <a asp-action="Index" asp-controller="@EncryptionList[i].Split(" ")[0]">@EncryptionList[i]</a>
+            @if (EncryptionList[i].Split(" ")[0] != "-")
+            {
+                <a asp-action="Index" asp-controller="@EncryptionList[i].Split(" ")[0]">@EncryptionList[i]</a>
+            }
+            else
+            {
+                <a asp-action="Index" asp-controller="@EncryptionList[i].Split(" ")[0]" class="link link1">@EncryptionList[i]</a>
+            }
+            
         }
     </div>
 }  
@@ -60,5 +76,34 @@
         display: flex;
         flex-direction: column;
     }
+
+    .link{
+        color: #000;
+        background-color: rgb(190, 191, 194);
+        margin: 23px;
+        text-decoration: none;
+        width: 30px;
+        height: 25px;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3px 7px;
+    }
+
+    .link1{
+        width: 300px;
+        height: 35px;
+        rgb(210, 211, 214);
+    }
+
+    .link2{
+        padding: 10px 20px;
+    }
+
+    .link:hover {
+        background-color: rgb(170, 171, 174);
+    }
+
 
 </style>

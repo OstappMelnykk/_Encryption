@@ -8,11 +8,11 @@ namespace EncryptionWebApplication
 {
     public static class Alphabets
     {
-        public static readonly List<char> ukrainian = 
-            "абвгґдеєжзиійїклмнопрстуфхцчшщьюя".ToList();
+        public static readonly List<char> ukrainian =
+            "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя".ToList();
 
-        public static readonly List<char> ukrainianCapital = 
-            "АБВГҐДЕЄЖЗИІЙЇКЛМНОПРСТУФХЦЧШЩЬЮЯ".ToList();
+        public static readonly List<char> ukrainianCapital =
+            "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ".ToList();
 
         public const int ukrainianLen = 33;
 

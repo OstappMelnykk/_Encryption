@@ -11,5 +11,12 @@ namespace EncryptionWebApplication.Controllers
         {
             return View("Index");
         }
+
+        public IActionResult DevInfo()
+        {
+            return View("DevInfo");
+        }
+
+
     }
 }
